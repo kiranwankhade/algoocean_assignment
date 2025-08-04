@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -29,10 +29,10 @@ const DisplayPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userRes = await axios.get("https://algoocean-assignment.onrender.com/api/user");
-        const dogRes = await axios.get("https://dog.ceo/api/breeds/image/random");
-        setUser(userRes.data);
-        setDogImage(dogRes.data.message);
+        const userResponse = await axios.get("https://algoocean-assignment.onrender.com/api/user");
+        const dogResponse = await axios.get("https://dog.ceo/api/breeds/image/random");
+        setUser(userResponse.data);
+        setDogImage(dogResponse.data.message);
         setLoading(false);
       } catch {
         alert("Error loading data");
