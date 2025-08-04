@@ -7,6 +7,6 @@ const fonts = {
   heading: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`
 }
 
-const customTheme = extendTheme(fonts)
+const customeTheme = extendTheme(fonts)
 
-export default customTheme
+export default customeTheme

@@ -123,7 +123,7 @@ Returns the latest saved user:
 
 ## 🌐 Optional Live Demo
 
-- Backend deployed on: `https://your-backend-url.onrender.com`
+- Backend deployed on: `https://algoocean-assignment.onrender.com`
 - Frontend deployed on: `https://your-frontend.vercel.app`
 
 ---

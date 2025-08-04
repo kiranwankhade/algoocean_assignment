@@ -29,7 +29,7 @@ const DisplayPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userRes = await axios.get("http://localhost:8000/api/user");
+        const userRes = await axios.get("https://algoocean-assignment.onrender.com/api/user");
         const dogRes = await axios.get("https://dog.ceo/api/breeds/image/random");
         setUser(userRes.data);
         setDogImage(dogRes.data.message);

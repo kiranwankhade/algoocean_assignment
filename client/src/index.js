@@ -7,12 +7,12 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
 import { ChakraProvider } from '@chakra-ui/react';
-import customTheme from './customeTheme';
+import customeTheme from './customeTheme';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <BrowserRouter>
-      <ChakraProvider theme={customTheme}>
+      <ChakraProvider theme={customeTheme}>
         <App />
       </ChakraProvider>
     </BrowserRouter>

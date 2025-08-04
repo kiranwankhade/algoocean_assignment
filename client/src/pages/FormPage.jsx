@@ -61,7 +61,7 @@ const FormPage = () => {
   const handleSubmit = async () => {
     if (!validate()) return;
     try {
-      await axios.post("http://localhost:8000/api/user", formData);
+      await axios.post("https://algoocean-assignment.onrender.com/api/user", formData);
       toast({
         title: "Form submitted.",
         description: "User data saved successfully.",
