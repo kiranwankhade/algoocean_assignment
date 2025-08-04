@@ -7,7 +7,7 @@ const port = 8000;
 app.use(cors());
 app.use(express.json());
 
-let user = null;
+let user = null; // Local variable
 
 // Post the User
 app.post("/api/user", (req, res) => {

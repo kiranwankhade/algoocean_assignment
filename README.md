@@ -11,7 +11,7 @@ It allows users to submit their personal information (first name, last name, dat
 ```
 .
 ├── client/   → React + Chakra UI frontend
-└── server/   → Express backend (no DB, stores data in memory)
+└── server/   → Express backend (no DB, stores data in variable)
 ```
 
 ---
