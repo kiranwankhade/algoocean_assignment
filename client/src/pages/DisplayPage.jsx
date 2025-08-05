@@ -50,9 +50,7 @@ const DisplayPage = () => {
           );
           setDogImage(dogResponse.data.message);
           setLoading(false);
-        } else {
-          alert("Error loading data. Backend is down and no local data found.");
-        }
+        } 
       }
     };
     fetchData();

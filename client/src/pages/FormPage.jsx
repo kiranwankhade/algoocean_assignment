@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react"; 
+import { useState } from "react";
 import {
   Box,
   Text,
@@ -61,8 +61,10 @@ const FormPage = () => {
   const handleSubmit = async () => {
     if (!validate()) return;
     try {
-        localStorage.setItem("Algoocean-User",JSON.stringify(formData))
-      await axios.post("https://algoocean-assignment.onrender.com/api/user", formData);
+      await axios.post(
+        "https://algoocean-assignment.onrender.com/api/user",
+        formData
+      );
       toast({
         title: "Form submitted.",
         description: "User data saved successfully.",
@@ -70,10 +72,9 @@ const FormPage = () => {
         duration: 3000,
         isClosable: true,
         position: "top-right",
-      }).then(
-        navigate("/display"));
-      
+      })
       console.log("userData", formData);
+      navigate("/display"); 
       // Clear form after successful submission
       setFormData({
         firstName: "",
@@ -82,7 +83,9 @@ const FormPage = () => {
       });
       setErrors({});
     } catch (error) {
-      console.log("Error saving user data");
+        localStorage.setItem("Algoocean-User", JSON.stringify(formData));
+        navigate("/display"); 
+        console.log("Error saving user data");
     }
   };
 
