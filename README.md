@@ -24,6 +24,7 @@ It allows users to submit their personal information (first name, last name, dat
 - Styled with Chakra UI + glassmorphic effect
 - Responsive and mobile-friendly UI
 - Error handling and loading state
+- ✅ **Offline fallback using `localStorage` if backend is unavailable**
 
 ---
 
@@ -82,12 +83,14 @@ Frontend will run on: `http://localhost:3000`
 
 <details>
   <summary>Form Page</summary>
-  <img src="screenshots/form-page.png" alt="Form Page" width="600"/>
+ <img width="1336" height="607" alt="Algoo-SS1" src="https://github.com/user-attachments/assets/96be8349-d4ca-4b99-a499-c5a27b61be83" />
+
 </details>
 
 <details>
   <summary>Display Page</summary>
-  <img src="screenshots/display-page.png" alt="Display Page" width="600"/>
+  <img width="1354" height="600" alt="Algoo-SS3" src="https://github.com/user-attachments/assets/d5c0ca21-da6a-43f6-a5e5-77af55e7bbbc" />
+
 </details>
 
 ---
@@ -118,13 +121,20 @@ Returns the latest saved user:
   "dob": "1990-01-01"
 }
 ```
+---
+
+## 🛡️ Fallback Feature: LocalStorage
+- If the backend (GET /api/user) is not reachable (e.g. offline or deployed server is down), the app will:
+- Automatically load user data from localStorage (key: "Algoocean-User").
+- This ensures the display page still works without a backend connection.
+- The form page stores this data when the user submits successfully.
 
 ---
 
 ## 🌐 Optional Live Demo
 
 - Backend deployed on: `https://algoocean-assignment.onrender.com`
-- Frontend deployed on: `https://your-frontend.vercel.app`
+- Frontend deployed on: `[https://your-frontend.vercel.app](https://algooceanassignment.vercel.app/)`
 
 ---
 
