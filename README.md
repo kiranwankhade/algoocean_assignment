@@ -133,8 +133,8 @@ Returns the latest saved user:
 
 ## 🌐 Optional Live Demo
 
-- Backend deployed on: [](https://algooceanassignment.vercel.app)
-- Frontend deployed on: [](https://algooceanassignment.vercel.app/)
+- Backend deployed on: [https://algoocean-assignment.onrender.com](https://algoocean-assignment.onrender.com)
+- Frontend deployed on: [https://algooceanassignment.vercel.app](https://algooceanassignment.vercel.app/)
 
 ---
 
