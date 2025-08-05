@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react"; 
 import {
   Box,
   Text,
@@ -61,6 +61,7 @@ const FormPage = () => {
   const handleSubmit = async () => {
     if (!validate()) return;
     try {
+        localStorage.setItem("Algoocean-User",JSON.stringify(formData))
       await axios.post("https://algoocean-assignment.onrender.com/api/user", formData);
       toast({
         title: "Form submitted.",

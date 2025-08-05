@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -13,6 +13,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+// age calculate upto selected date
 const calculateAge = (dob) => {
   const birthDate = new Date(dob);
   const ageDiff = Date.now() - birthDate.getTime();
@@ -29,13 +30,29 @@ const DisplayPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userResponse = await axios.get("https://algoocean-assignment.onrender.com/api/user");
-        const dogResponse = await axios.get("https://dog.ceo/api/breeds/image/random");
+        const userResponse = await axios.get(
+          "https://algoocean-assignment.onrender.com/api/user"
+        );
+        const dogResponse = await axios.get(
+          "https://dog.ceo/api/breeds/image/random"
+        );
+
         setUser(userResponse.data);
         setDogImage(dogResponse.data.message);
         setLoading(false);
       } catch {
-        alert("Error loading data");
+        // If backend fails, fallback to localStorage
+        const localUser = localStorage.getItem("Algoocean-User");
+        if (localUser) {
+          setUser(JSON.parse(localUser));
+          const dogResponse = await axios.get(
+            "https://dog.ceo/api/breeds/image/random"
+          );
+          setDogImage(dogResponse.data.message);
+          setLoading(false);
+        } else {
+          alert("Error loading data. Backend is down and no local data found.");
+        }
       }
     };
     fetchData();
@@ -89,15 +106,27 @@ const DisplayPage = () => {
           mb={4}
           border="2px solid #ADEFD1"
         />
-        <Heading  size="lg" mb={2} fontFamily="serif">
+        <Text fontWeight={"bold"} size="lg" mb={1}>
+          Here’s a random dog to make your day!🐶
+        </Text>
+        <Divider borderColor="#0471DE" my={2} />
+        <Heading size="md" mb={1}>
           {user.firstName} {user.lastName}
         </Heading>
-        <Divider borderColor="#0471DE" my={4} />
-        <VStack spacing={2} align="start" >
-          <Text><strong>First Name:</strong> {user.firstName}</Text>
-          <Text><strong>Last Name:</strong> {user.lastName}</Text>
-          <Text><strong>Date of Birth:</strong> {user.dob}</Text>
-          <Text><strong>Age:</strong> {calculateAge(user.dob)} years</Text>
+        <Divider borderColor="#0471DE" my={2} />
+        <VStack spacing={2} align="start">
+          <Text>
+            <strong>First Name:</strong> {user.firstName}
+          </Text>
+          <Text>
+            <strong>Last Name:</strong> {user.lastName}
+          </Text>
+          <Text>
+            <strong>Date of Birth:</strong> {user.dob}
+          </Text>
+          <Text>
+            <strong>Age:</strong> {calculateAge(user.dob)} years
+          </Text>
         </VStack>
         <Button
           mt={6}
