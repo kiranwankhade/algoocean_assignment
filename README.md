@@ -82,12 +82,14 @@ Frontend will run on: `http://localhost:3000`
 
 <details>
   <summary>Form Page</summary>
-  <img src="screenshots/form-page.png" alt="Form Page" width="600"/>
+ <img width="1336" height="607" alt="Algoo-SS1" src="https://github.com/user-attachments/assets/96be8349-d4ca-4b99-a499-c5a27b61be83" />
+
 </details>
 
 <details>
   <summary>Display Page</summary>
-  <img src="screenshots/display-page.png" alt="Display Page" width="600"/>
+  <img width="1354" height="600" alt="Algoo-SS3" src="https://github.com/user-attachments/assets/d5c0ca21-da6a-43f6-a5e5-77af55e7bbbc" />
+
 </details>
 
 ---
@@ -124,7 +126,7 @@ Returns the latest saved user:
 ## 🌐 Optional Live Demo
 
 - Backend deployed on: `https://algoocean-assignment.onrender.com`
-- Frontend deployed on: `https://your-frontend.vercel.app`
+- Frontend deployed on: `[https://your-frontend.vercel.app](https://algooceanassignment.vercel.app/)`
 
 ---
 
