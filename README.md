@@ -24,6 +24,7 @@ It allows users to submit their personal information (first name, last name, dat
 - Styled with Chakra UI + glassmorphic effect
 - Responsive and mobile-friendly UI
 - Error handling and loading state
+- ✅ **Offline fallback using `localStorage` if backend is unavailable**
 
 ---
 
@@ -120,6 +121,13 @@ Returns the latest saved user:
   "dob": "1990-01-01"
 }
 ```
+---
+
+## 🛡️ Fallback Feature: LocalStorage
+- If the backend (GET /api/user) is not reachable (e.g. offline or deployed server is down), the app will:
+- Automatically load user data from localStorage (key: "Algoocean-User").
+- This ensures the display page still works without a backend connection.
+- The form page stores this data when the user submits successfully.
 
 ---
 
